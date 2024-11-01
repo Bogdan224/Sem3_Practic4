@@ -40,7 +40,7 @@ namespace prac_4
         }
         public string Group { get; set; }
 
-        public Student(string firstname, string lastname, string patronymic, int birth, int course, string group)
+        public Student(string lastname, string firstname, string patronymic, int birth, int course, string group)
         {
             Firstname = firstname;
             Lastname = lastname;
@@ -50,6 +50,15 @@ namespace prac_4
             Group = group;
         }
 
+        public override string ToString()
+        {
+            return $"Фамилия: {Lastname}\n" +
+                $"Имя: {Firstname}\n" +
+                $"Отчество: {Patronymic}\n" +
+                $"Год рождения: {Birth}\n" +
+                $"Курс: {Course}\n" +
+                $"Группа: {Group}\n";
+        }
 
     }
 }
